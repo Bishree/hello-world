@@ -1,9 +1,10 @@
 fn main() {
     println!("Hello, world!");
-    other_function (5, 6);
-}
-fn other_function(x:i32, y:i32){
-    println!("the value of x is: {} ", x);
-    println!("the value of y is: {} ", y);
-
+    let x = 5;
+    println!("the value of x is: {}", x);
+    let y = {
+        let x = 3;
+        x+3
+    };
+    println!("The value of y is: {}", y);
 }
