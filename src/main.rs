@@ -1,6 +1,10 @@
 fn main() {
     println!("Hello, world!");
-    println! ("ahmed this is goooood");
+
+    another_function();
 
  }
+fn another_function (){
+    println!("Another function. ")
+}
 
