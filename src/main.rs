@@ -12,7 +12,7 @@ fn main() {
         io::stdin()
             .read_line(&mut degree_type).unwrap();
         /// defreciate the input for the required tempreture degree type
-        match degree_type.as_str() {
+        match degree_type.as_str().trim() {
             "ahmed" => {
                 println!("Enter the Celsius degree plz:/n");
                 let mut degree_int = String::new();
@@ -28,7 +28,9 @@ fn main() {
                 c_conv(degree_int_number);
                 }
 
-            _ => {}
+            _ => {
+                println!("this is the end of the match")
+            }
         }println!("Nothing found");
         // f_conv(int_degree_type);
         // println!("The celsius value is: {} ", degree_type);
@@ -39,13 +41,13 @@ fn main() {
 
 
     // create a function for the convert formula
-fn c_conv (f:u32){
-        let c = (f-32) * (5 / 9);
+fn c_conv (degree:i32){
+        let mut c = (degree - 32) * (5/9);
         println!("The value of the Celsius is: {}", c);
     }
 
-fn f_conv (c:u32){
-        let mut f = (c * (9 / 5)) + 32;
+fn f_conv (degree:i32){
+        let mut f = (degree * (9 / 5)) + 32;
         println!("The value of the Fahrenheit is: {}", f);
     }
 
