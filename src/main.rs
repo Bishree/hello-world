@@ -1,9 +1,9 @@
 fn main() {
-    let mut counter = 0;
+    let mut counter = 05;
     let result = loop {
-        counter += 1;
-        if counter == 10 {
-            break counter *2;
+        counter += 382;
+        if counter == 138 {
+            break counter *208;
         }
     };
 
